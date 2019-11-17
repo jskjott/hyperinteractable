@@ -1,4 +1,29 @@
+@font-face {
+    font-family: "mononoki-bold";
+    src: url("fonts/mononoki-Bold.woff") format('woff');
+}
+
+@font-face {
+    font-family: "mononoki";
+    src: url("fonts/mononoki-BoldItalic.woff") format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "mononoki";
+    src: url("fonts/mononoki-Italic.woff") format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "mononoki";
+    src: url("fonts/mononoki-Regular.woff") format('woff');
+    font-style: italic;
+}
+
 html {
+  font-family: mononoki;
   height: 100%;
   width: 100%;
 }
@@ -9,60 +34,81 @@ body {
   margin: 2rem;
 }
 
+.sidenote {
+  position: absolute;
+  left: calc(100% - 285px);
+  max-width: 250px;
+  font-size: 16px;
+  color: silver;
+}
+
+img {
+  position: absolute;
+  max-width: 50%;
+  left: 45%;
+  filter: invert(1);
+  z-index: -1;
+}
+
 #head {
   height: 100%;
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 265px 1fr 265px;
 }
 
 h1 {
   font-size: 3.5rem;
   writing-mode: vertical-rl;
-  color: rosybrown;
-  margin: 1rem;
+  color: white;
+  padding: 1rem;
+  font-family: mononoki-bold;
+  border-style: solid;
+  border-color: white;
+  border-width: 1rem;
 }
 
 h3 {
   color: #a36666;
+  font-family: mononoki-bold;
 }
 
 p {
   color: #a36666;
 }
 
-#content {
+/*#content {
   display: grid;
   grid-template-rows: 1fr 1fr;
-}
+}*/
 
 #upper {
   display: grid;
-  grid-template-columns: 6fr 100px;
+  grid-template-columns: 6fr 150px;
 }
 
 #upper2 {
   display: grid;
-  grid-template-rows: 100px 5fr;
+  grid-template-rows: 150px 5fr;
 }
 
 #upper3 {
   display: grid;
-  grid-template-rows: 1fr 100px;
+  grid-template-rows: 1fr 150px;
 }
 
 #upper4 {
   display: grid;
-  grid-template-columns: 2fr 100px 3fr;
+  grid-template-columns: 2fr 150px 3fr;
 }
 
 #lower {
   display: grid;
-  grid-template-columns: 6fr 100px;
+  grid-template-columns: 6fr 150px;
 }
 
 #lower2 {
   display: grid;
-  grid-template-rows: 100px 5fr;
+  grid-template-rows: 150px 5fr;
 }
 
 #lower3 {
@@ -80,15 +126,15 @@ p {
   word-break: break-all;
 }
 
-.left {
+/*.left {
   writing-mode: vertical-rl;
   transform: rotate(180deg)
 }
 
 .right {
   writing-mode: vertical-rl;
-}
+}*/
 
-.reflect {
+/*.reflect {
     transform: rotate(180deg)
-}
+}*/
